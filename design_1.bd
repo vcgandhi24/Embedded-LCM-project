@@ -1,0 +1,277 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x395E6810ABA6FAB4",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../project.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "lcm_top_0": "",
+      "Decoder_0": "",
+      "Decoder_1": "",
+      "pmod_seven_segments_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "go_i": {
+        "direction": "I"
+      },
+      "digit_select": {
+        "direction": "O"
+      },
+      "segments": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "COL": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "COL2": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "row": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "row2": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "lcm_top_0": {
+        "vlnv": "xilinx.com:module_ref:lcm_top:1.0",
+        "xci_name": "design_1_lcm_top_0_0",
+        "xci_path": "ip\\design_1_lcm_top_0_0\\design_1_lcm_top_0_0.xci",
+        "inst_hier_path": "lcm_top_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "lcm_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "go_i": {
+            "direction": "I"
+          },
+          "x_i": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "y_i": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "d_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Decoder_0": {
+        "vlnv": "xilinx.com:module_ref:Decoder:1.0",
+        "xci_name": "design_1_Decoder_0_0",
+        "xci_path": "ip\\design_1_Decoder_0_0\\design_1_Decoder_0_0.xci",
+        "inst_hier_path": "Decoder_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Decoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "Row": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "Col": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "DecodeOut": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Decoder_1": {
+        "vlnv": "xilinx.com:module_ref:Decoder:1.0",
+        "xci_name": "design_1_Decoder_1_0",
+        "xci_path": "ip\\design_1_Decoder_1_0\\design_1_Decoder_1_0.xci",
+        "inst_hier_path": "Decoder_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Decoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "Row": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "Col": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "DecodeOut": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "pmod_seven_segments_0": {
+        "vlnv": "xilinx.com:module_ref:pmod_seven_segments:1.0",
+        "xci_name": "design_1_pmod_seven_segments_0_0",
+        "xci_path": "ip\\design_1_pmod_seven_segments_0_0\\design_1_pmod_seven_segments_0_0.xci",
+        "inst_hier_path": "pmod_seven_segments_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pmod_seven_segments",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "number": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "digit_select": {
+            "direction": "O"
+          },
+          "segments": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Decoder_0_Col": {
+        "ports": [
+          "Decoder_0/Col",
+          "COL"
+        ]
+      },
+      "Decoder_0_DecodeOut": {
+        "ports": [
+          "Decoder_0/DecodeOut",
+          "lcm_top_0/x_i"
+        ]
+      },
+      "Decoder_1_Col": {
+        "ports": [
+          "Decoder_1/Col",
+          "COL2"
+        ]
+      },
+      "Decoder_1_DecodeOut": {
+        "ports": [
+          "Decoder_1/DecodeOut",
+          "lcm_top_0/y_i"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "Decoder_0/clk",
+          "Decoder_1/clk",
+          "lcm_top_0/clk",
+          "pmod_seven_segments_0/clk"
+        ]
+      },
+      "go_i_1": {
+        "ports": [
+          "go_i",
+          "lcm_top_0/go_i"
+        ]
+      },
+      "lcm_top_0_d_out": {
+        "ports": [
+          "lcm_top_0/d_out",
+          "pmod_seven_segments_0/number"
+        ]
+      },
+      "pmod_seven_segments_0_digit_select": {
+        "ports": [
+          "pmod_seven_segments_0/digit_select",
+          "digit_select"
+        ]
+      },
+      "pmod_seven_segments_0_segments": {
+        "ports": [
+          "pmod_seven_segments_0/segments",
+          "segments"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "lcm_top_0/rst"
+        ]
+      },
+      "row2_1": {
+        "ports": [
+          "row2",
+          "Decoder_1/Row"
+        ]
+      },
+      "row_1": {
+        "ports": [
+          "row",
+          "Decoder_0/Row"
+        ]
+      }
+    }
+  }
+}
